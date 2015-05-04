@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<!-- <h1>Listing Todo Items</h1> -->
+
+<h1 class="sub-header">Wyncode Work Prioritizer</h1>
+
+
+<h3><%= link_to 'New Work Item', new_todo_item_path %></h3>
+
+
+
+
+
+<!-- TABLE: LISTING AREA -->
+
+
+    <div class="table-responsive">
+      <table class="table table-striped">  <thead>
+        <tr>
+          <th>ID</th>
+          <th>Display</th>
+          <th colspan="1"></th>
+          
+          <th>Change</th>
+          <th colspan="1"></th>
+          
+          <th>Eliminate</th>
+          
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- Iterating through items to display -->
+        <% @todo_items.each do |todo_item| %>
+
+          <tr>
+            <!-- setting our tables, left to right -->
+            <td><%= todo_item.description %></td>
+
+            <td><%= link_to 'Show', todo_item %></td>
+            <!-- some spacers -->
+            <th colspan="1"></th>
+            <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
+
+            <th colspan="1"></th>
+            <td>
+              <%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+            <!-- cmds link to ActionController Methods? -->
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+    <br>
+
+
