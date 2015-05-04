@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150501185817) do
+ActiveRecord::Schema.define(version: 20150504042535) do
+
+  create_table "todo_descs", force: :cascade do |t|
+    t.string   "contentLstring"
+    t.integer  "todo_item_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "todo_descs", ["todo_item_id"], name: "index_todo_descs_on_todo_item_id"
 
   create_table "todo_items", force: :cascade do |t|
     t.string   "description"

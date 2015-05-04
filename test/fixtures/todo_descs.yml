@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contentLstring: MyString
+  todo_item_id: 
+
+two:
+  contentLstring: MyString
+  todo_item_id: 

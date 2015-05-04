@@ -5,7 +5,7 @@
 <h1 class="sub-header">Wyncode Work Prioritizer</h1>
 
 
-<h3><%= link_to 'New Work Item', new_todo_item_path %></h3>
+<h3><%= link_to 'New Work Item  ', new_todo_item_path %><i class="fa fa-plus-square"></i></h3>
 
 
 
@@ -35,17 +35,26 @@
 
           <tr>
             <!-- setting our tables, left to right -->
-            <td><%= todo_item.description %></td>
+
+            <td><i class="fa fa-check-square"></i><%= todo_item.description %></td>
 
             <td><%= link_to 'Show', todo_item %></td>
+            <!-- temp icon -->
+            <td><%= link_to todo_item do %><i class= "fa fa-eye"></i><% end %></td>
+
             <!-- some spacers -->
+
             <th colspan="1"></th>
-            <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
+<!-- edit with icon nested -->
+            <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %><i class="fa fa-pencil-square-o"></i></td>
 
             <th colspan="1"></th>
             <td>
               <%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %>
             </td>
+            <!-- temp icon -->
+            <td><%= link_to todo_item do %><i class="fa fa-times"></i><% end %></td>
+            
             <!-- cmds link to ActionController Methods? -->
           </tr>
         <% end %>
