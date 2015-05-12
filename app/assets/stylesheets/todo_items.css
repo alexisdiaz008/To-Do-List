@@ -97,7 +97,21 @@ nav .navbar .navbar-inverse .navbar-fixed-top {
 /*
  * Main content
  */
+/*
+.fa-check-square {
+  cursor: pointer;
+  margin: 0 10px 0 10px;
+}
 
+.fa-check-square:hover, .list p .active {
+  color: #ffcc00;
+}
+
+.fa-check-square {
+  cursor: pointer;
+  float: right;
+}*/
+/* THIS ABOVE IS ICON SETTINGS*/
 .main {
   padding: 20px;
 }
